@@ -1,14 +1,14 @@
 cask "mweb-pro" do
-  version "4.1.8"
+  version "4.2.1"
 
   if MacOS.version <= :catalina
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}_catalina.dmg",
         verified: "cdn.mwebapp.cn/"
-    sha256 "a6cfb2671446295ee30087b4ab3e66cd46e423e8eb507aee04ce958bb56f34df"
+    sha256 "f9e349ad5e9c5a3bc3bd32271f04af4aa9a772027637507988dc993c1599e399"
   else
     url "https://cdn.mwebapp.cn/MWebPro#{version.no_dots}.dmg",
         verified: "cdn.mwebapp.cn/"
-    sha256 "2710b95aac19a6f1c4c08d85488fc6c1d40f902aa2d7976bdecd832ef41a8be6"
+    sha256 "836d890d2571e45ed3c69a4a9bf35dbb4ee03c08542b9e0be0eb40783bc953b1"
   end
 
   name "MWeb Pro"

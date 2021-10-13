@@ -1,14 +1,14 @@
 cask "electron" do
-  version "14.0.1"
+  arch = Hardware::CPU.intel? ? "x64" : "arm64"
 
+  version "15.1.2"
+
+  url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-#{arch}.zip",
+      verified: "github.com/electron/electron/"
   if Hardware::CPU.intel?
-    sha256 "66f14e804b0a40e50562fcb4ed44a0dca4fd27be5420b787045276fcb9a4b9fd"
-    url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-x64.zip",
-        verified: "github.com/electron/electron/"
+    sha256 "f95f70790fa689684ec2d4822451e45968a2307ccd674a4378a89667f1e2c50d"
   else
-    sha256 "a8816214dd31c5a44a51fd43c6709e7a7fe69750e5e42b75bfa747402ea3f75f"
-    url "https://github.com/electron/electron/releases/download/v#{version}/electron-v#{version}-darwin-arm64.zip",
-        verified: "github.com/electron/electron/"
+    sha256 "edcfb7e83c5edad21b05d9babb4a2840157e68dbe4278c3ab3b609ece22e1372"
   end
 
   name "Electron"
